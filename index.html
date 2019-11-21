@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <link rel="icon" href="favicon.ico">
+
+  <title>Cycle Cleaner - fastApps by Shawn Esseltine</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin.css" rel="stylesheet">
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="js/papaparse.min.js"></script>
+  <script src="js/accounting.min.js"></script>
+  <script src="js/main.js"></script>
+
+</head>
+
+<body id="page-top" class="sidebar-toggled">
+
+  <nav class="navbar navbar-expand navbar-dark bg-primary static-top">
+
+    <a class="navbar-brand mr-1" href="index.html">fastApps</a>
+
+    <button class="btn btn-link btn-sm text-white order-1 order-sm-0 d-block d-md-none
+ d-sm-block" id="sidebarToggle" href="#">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Navbar Signature -->
+    <div class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0 text-white">
+        Developed by Shawn Esseltine | sesselti@fastenal.com
+    </div>
+
+  </nav>
+
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="sidebar navbar-nav toggled">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">
+          <i class="fas fa-recycle"></i>
+          <span>Cycle Cleaner</span>
+        </a>
+      </li>
+    </ul>
+
+    <div id="content-wrapper">
+
+      <div class="container">
+          <h1><i class="fas fa-recycle"></i> Cycle Cleaner</h1>
+          <div class="row mb-3 ">
+            <!-- Parsing Card -->
+            <div class="col-8">
+                <div class="card">
+                  <div class="card-header">
+                    <i class="far fa-file"></i>
+                    File
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Settings</h5>
+
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                      </div>
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="files" onchange="updateFileText()">
+                        <label class="custom-file-label" for="files" id="fileLabel">Choose file</label>
+                      </div>
+                    </div>
+
+                    <div class="form-check form-check-inline mb-3">
+                      <input class="form-check-input" type="checkbox" id="header" checked>
+                      <label class="form-check-label" for="header">Header Row</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="skipEmptyLines" checked>
+                      <label class="form-check-label" for="skipEmptyLines">Skip Empty Lines</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="combineLikeParts" checked>
+                      <label class="form-check-label" for="combineLikeParts">Combine Like Parts</label>
+                    </div>
+                    <br>
+                    <button type="button" class="btn btn-primary centre" onclick="parseFile()">Run</button>
+                  </div>
+                </div>
+            </div>
+
+            <!-- Saving Card -->
+            <div class="col-4 d-flex align-items-stretch">
+                <div class="card w-100">
+                  <div class="card-header">
+                    <i class="far fa-save"></i>
+                    Save
+                  </div>
+                  <div class="card-body flex-fill text-center">
+
+                    <h5 class="card-title text-left">Download</h5>
+                    <button class="btn btn-success" id="download-button" onclick="download()" disabled><i class="fas fa-download"></i> Download</button>
+                  </div>
+                  </div>
+                </div>
+            </div>
+
+
+
+
+        <!-- DataTable -->
+        <div class="card mb-3 align-items-stretch">
+          <div class="card-header">
+            <i class="fas fa-table"></i>
+            Results</div>
+          <div class="card-body">
+            <div id="table">
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- /.container -->
+
+      <!-- Sticky Footer -->
+      <footer class="sticky-footer">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span class="d-block mb-3">Copyright © Shawn Esseltine 2019</span>
+            <span class="d-block"><a href="citations.html">Citations and Mentions</a></span>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+    <!-- /.content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+</body>
+
+</html>
